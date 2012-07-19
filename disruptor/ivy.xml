@@ -1,0 +1,11 @@
+<ivy-module version="2.0">
+    <info organisation="com.oscon" module="disruptor" />
+
+    <configurations>
+        <conf name="master" />
+    </configurations>
+
+    <dependencies>
+        <dependency org="com.googlecode.disruptor" name="disruptor" rev="2.10.1" />
+    </dependencies>
+</ivy-module>
