@@ -48,5 +48,15 @@ object HelloWorld extends App {
   val l1plusl2with0prepended = 0 :: l1plusl2 // "::" is the cons/conjoin operator
   val l1redux = 1 :: 2 :: 3 :: Nil  // Nil.::(3).::(2).::(1) but :: is right-associative
   // :: conjoins in constant time whereas +: (append) complexity grows linearly with the size of the List
+
+  var tuple = ("Hello", 30, "World", 'sym)
+  println(tuple._1.getClass)
+  println(tuple._2.getClass)
+  println(tuple._3.getClass)
+  println(tuple._4.getClass)
+  
+  var m = Map("One" -> 1, "Two" -> 2, "Three" -> 3)
+  m += ("Four" -> 4)
+  println(m)
 }
 
