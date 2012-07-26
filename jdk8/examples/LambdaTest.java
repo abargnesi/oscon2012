@@ -2,8 +2,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.List;
 import java.util.ArrayList;
-import java.util.Iterable;
-import static java.lang.System.out.println;
+import static java.lang.System.out;
 
 // juicy bits
 import java.util.functions.*;
@@ -20,12 +19,14 @@ public class LambdaTest {
         people.add(new Person("James", 28, 0));
 
         // forEach with Lambda
-        people.forEach(p -> {println(p.getName())});
+        people.forEach(p -> {out.println(p.getName());});
+
+        out.println("");
 
         // filter
-        Predicate<Integer> encumbered = p -> p.getNumChildren() > 0;
-        Iterable<People> parents = people.filter(encumbered)
-        parents.forEach(p -> {println(p.getName())};
+        Predicate<Person> encumbered = p -> p.getNumChildren() > 0;
+        Iterable<Person> parents = people.filter(encumbered);
+        parents.forEach(p -> {out.println(p.getName());});
 
         // filter/map/reduce
     }

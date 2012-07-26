@@ -1,5 +1,3 @@
-import java.util.Date;
-
 /**
  * Simple contrived Person class.
  */
